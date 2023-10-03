@@ -49,6 +49,7 @@ def name_search(raw_txt):
         print("No match found.")
 
 #search gender using regular expression from text
+
 def gender_search(raw_txt):
     male_list=["male","mate","malt"]
     pattern2 = re.compile(r'sex. (\w+)',re.IGNORECASE)

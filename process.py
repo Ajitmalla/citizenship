@@ -18,9 +18,11 @@ detected_text=pytesseract.image_to_string(noise_img)
 
 
 print(detected_text)
-pattern=re.compile(r"/(Full Name \(in block\):([a-zA-Z ]+)|Full Name.: ([a-zA-Z ]+))/gm")
-matched=pattern.search(detected_text)
-print(matched)
+pattern=re.compile(r'Full Name\. ([a-zA-Z ]+)')
+
+matches=pattern.search(detected_text)
+print(matches.group(1))
+
 
 
 
